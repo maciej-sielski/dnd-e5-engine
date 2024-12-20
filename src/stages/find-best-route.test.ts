@@ -2,7 +2,8 @@ import { findBestRoute } from './find-best-route';
 import { Stage } from './stage';
 
 describe('find-best-route', () => {
-    const testStage: Stage = {
+    type StageTestName = 'A' | 'B' | 'C' | 'D';
+    const testStage: Stage<StageTestName> = {
         fields: [
             { name: 'A', cardProbability: 0.1 },
             { name: 'B', cardProbability: 0.2 },
