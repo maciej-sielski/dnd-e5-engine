@@ -1,4 +1,4 @@
-import { analyzeStage } from './stage';
+import { analyzeStage } from "./analyze-stage";
 import { stage1 } from './stage1';
 
 describe('stage1', () => {
