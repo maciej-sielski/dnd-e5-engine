@@ -2,13 +2,14 @@ import { findBestRoute } from './find-best-route';
 import { Stage } from './stage';
 
 describe('find-best-route', () => {
-    type StageTestName = 'A' | 'B' | 'C' | 'D';
-    const testStage: Stage<StageTestName> = {
+    type StageTestId = 'A' | 'B' | 'C' | 'D';
+    const testStage: Stage<StageTestId> = {
+        id: 'test',
         fields: [
-            { name: 'A', cardProbability: 0.1 },
-            { name: 'B', cardProbability: 0.2 },
-            { name: 'C', cardProbability: 0.3 },
-            { name: 'D', cardProbability: 0.4 },
+            { id: 'A', cardProbability: 0.1 },
+            { id: 'B', cardProbability: 0.2 },
+            { id: 'C', cardProbability: 0.3 },
+            { id: 'D', cardProbability: 0.4 },
         ],
         routes: [
             { fromStageName: 'A', toStageName: 'B', moveCost: 5 },

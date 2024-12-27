@@ -1,7 +1,7 @@
-import { StageFieldName, Stage } from "./stage";
+import { StageFieldId, Stage } from "./stage";
 
-export function analyzeStage<T extends StageFieldName>(stage: Stage<T>): { noOutgoingRoutes: T[]; noIngoingRoutes: T[]; oneWayRoutes: [T, T][]; } {
-    const fieldNames = new Set(stage.fields.map(field => field.name));
+export function analyzeStage<T extends StageFieldId>(stage: Stage<T>): { noOutgoingRoutes: T[]; noIngoingRoutes: T[]; oneWayRoutes: [T, T][]; } {
+    const fieldNames = new Set(stage.fields.map(field => field.id));
     const outgoingRoutes = new Map<T, Set<T>>();
     const ingoingRoutes = new Map<T, Set<T>>();
     const oneWayRoutes: [T, T][] = [];

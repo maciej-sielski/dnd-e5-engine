@@ -1,15 +1,15 @@
 import { checkRandom } from "../utils";
 import { findBestRoute } from "./find-best-route";
-import { Stage, StageFieldName, StageFieldRoute } from "./stage";
+import { Stage, StageFieldId, StageFieldRoute } from "./stage";
 
-export interface MoveToStageFieldResult<T extends StageFieldName> {
+export interface MoveToStageFieldResult<T extends StageFieldId> {
     reachedFieldName: T;
     moveCost: number;
     availableMovePoints: number;
     shouldRaiseCardEvent: boolean;
 }
 
-export function moveToStageField<T extends StageFieldName>(stage: Stage<T>, sourceFieldName: T, targetFieldName: T, availableMovePoints: number): MoveToStageFieldResult<T> {
+export function moveToStageField<T extends StageFieldId>(stage: Stage<T>, sourceFieldName: T, targetFieldName: T, availableMovePoints: number): MoveToStageFieldResult<T> {
     const route = findBestRoute(stage, sourceFieldName, targetFieldName);
 
     let nextField = route.shift();
@@ -25,7 +25,7 @@ export function moveToStageField<T extends StageFieldName>(stage: Stage<T>, sour
         availableMovePoints -= currentField.moveCost;
         moveCost += currentField.moveCost;
 
-        shouldRaiseCardEvent = checkRandom(stage.fields.find(field => field.name === currentField!.toStageName)?.cardProbability || 0);
+        shouldRaiseCardEvent = checkRandom(stage.fields.find(field => field.id === currentField!.toStageName)?.cardProbability || 0);
         if (shouldRaiseCardEvent) {
             break;
         }

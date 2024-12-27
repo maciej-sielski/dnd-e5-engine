@@ -1,6 +1,6 @@
-import { Stage, StageFieldName, StageFieldRoute } from "./stage";
+import { Stage, StageFieldId, StageFieldRoute } from "./stage";
 
-export function findBestRoute<T extends StageFieldName>(stage: Stage<T>, from: T, to: T): StageFieldRoute<T>[] {
+export function findBestRoute<T extends StageFieldId>(stage: Stage<T>, from: T, to: T): StageFieldRoute<T>[] {
     const routesMap: { [key: string]: StageFieldRoute<T>[] } = {};
     stage.routes.forEach(route => {
         if (!routesMap[route.fromStageName]) {
@@ -9,7 +9,7 @@ export function findBestRoute<T extends StageFieldName>(stage: Stage<T>, from: T
         routesMap[route.fromStageName].push(route);
     });
 
-    const visited = new Set<StageFieldName>();
+    const visited = new Set<StageFieldId>();
     const queue: { path: StageFieldRoute<T>[], cost: number }[] = [{ path: [], cost: 0 }];
     let bestPath: StageFieldRoute<T>[] = [];
     let bestCost = Infinity;

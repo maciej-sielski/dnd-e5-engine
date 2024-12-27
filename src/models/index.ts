@@ -16,47 +16,6 @@ export type SpellComponents = "V" | "S" | string /** "M (details)" */;
 /** In feet */
 export type Range = "Self" | number;
 
-export interface Character {
-    name: string;
-    race: CharacterRaces;
-    class: CharacterClasses;
-    level: number;
-    hp: {
-        current: number;
-        max: number;
-    };
-    attributes: {
-        [key in AttributeName]: number;
-    };
-    skills: Skill[];
-    inventory: Item[];
-}
-
-export interface Item {
-    name: string;
-    description: string;
-    weight: number;
-    isMagical: boolean;
-    value: number;
-}
-
-export interface Weapon extends Item {
-    weaponType: WeaponTypes;
-    damage: {
-        dice: string;
-        type: DamageTypes;
-    };
-    properties: WeaponProperties[];
-    requirements?: {
-        /** Skills required to wield this weapon effectively */
-        skills?: CharacterSkills[];
-        /** Minimum require attributes values */
-        attributes?: {
-            [key in AttributeName]: number;
-        };
-    };
-}
-
 export interface Skill {
     name: CharacterSkills;
     attribute: AttributeName;
@@ -66,10 +25,9 @@ export interface Skill {
 export interface Spell {
     name: string;
     level: number;
-    // TODO: maybe one day...
-    // range: Range;
-    // components: SpellComponents[];
-    // castingTime: string;
-    // duration: string;
+    range: Range;
+    components: SpellComponents[];
+    castingTime: string;
+    duration: string;
     school: SpellSchools;
 }

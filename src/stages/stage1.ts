@@ -6,38 +6,39 @@ export type Stage1FieldName = 'blacksmith' | 'before-blacksmith' | 'tavern' | 'w
     | 'before-temple' | 'before-tower' | 'tower' | 'before-gate' | 'gate';
 
 export const stage1: Stage<Stage1FieldName> = {
+    id: 'stage1',
     fields: [
-        { name: 'blacksmith' },
-        { name: 'before-blacksmith' },
-        { name: 'tavern' },
+        { id: 'blacksmith' },
+        { id: 'before-blacksmith' },
+        { id: 'tavern' },
 
-        { name: 'warriors-lodge' },
-        { name: 'before-warriors-lodge' },
-        { name: 'before-tavern' },
+        { id: 'warriors-lodge' },
+        { id: 'before-warriors-lodge' },
+        { id: 'before-tavern' },
 
-        { name: 'above-monument-and-before-mages-lodge' },
-        { name: 'monument' },
-        { name: 'below-monument-and-before-chief' },
-        { name: 'chiefs-house' },
+        { id: 'above-monument-and-before-mages-lodge' },
+        { id: 'monument' },
+        { id: 'below-monument-and-before-chief' },
+        { id: 'chiefs-house' },
 
-        { name: 'mages-lodge' },
-        { name: 'before-alchemist' },
-        { name: 'right-of-monument' },
-        { name: 'chiefs-house' },
+        { id: 'mages-lodge' },
+        { id: 'before-alchemist' },
+        { id: 'right-of-monument' },
+        { id: 'chiefs-house' },
 
-        { name: 'alchemists-house' },
-        { name: 'before-house-of-a' },
-        { name: 'house-of-a' },
+        { id: 'alchemists-house' },
+        { id: 'before-house-of-a' },
+        { id: 'house-of-a' },
 
-        { name: 'alley-behind-alchemist' },
+        { id: 'alley-behind-alchemist' },
 
-        { name: 'temple' },
-        { name: 'before-temple' },
-        { name: 'before-tower' },
-        { name: 'tower' },
+        { id: 'temple' },
+        { id: 'before-temple' },
+        { id: 'before-tower' },
+        { id: 'tower' },
 
-        { name: 'before-gate' },
-        { name: 'gate' },
+        { id: 'before-gate' },
+        { id: 'gate' },
     ],
     routes: [
         // Column 1
