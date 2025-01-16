@@ -75,7 +75,18 @@ const sampleNPC: NPC = {
         items: [],
         money: {
             copperCoins: 10
+        },
+        equipped: {
         }
+    },
+    armorClass: 10,
+    modifiers: {
+        strength: 0,
+        dexterity: 0,
+        constitution: 0,
+        intelligence: 0,
+        wisdom: 0,
+        charisma: 0
     }
 };
 
@@ -138,7 +149,18 @@ const game: Game = {
             items: [],
             money: {
                 copperCoins: 10
+            },
+            equipped: {
             }
+        },
+        armorClass: 10,
+        modifiers: {
+            strength: 0,
+            dexterity: 0,
+            constitution: 0,
+            intelligence: 0,
+            wisdom: 0,
+            charisma: 0
         }
     },
     currentStage: stage1.id,

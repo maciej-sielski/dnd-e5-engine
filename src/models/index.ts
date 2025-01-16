@@ -1,7 +1,7 @@
 export type AttributeName = 'strength' | 'dexterity' | 'constitution' | 'intelligence' | 'wisdom' | 'charisma';
 export type DamageTypes = "bludgeoning" | "piercing" | "slashing" | "acid" | "cold" | "fire" | "force" | "lightning" | "necrotic" | "poison" | "psychic" | "radiant" | "thunder";
 export type CharacterClasses = "barbarian" | "bard" | "cleric" | "druid" | "fighter" | "monk" | "paladin" | "ranger" | "rogue" | "sorcerer" | "warlock" | "wizard";
-export type CharacterRaces = "dwarf" | "elf" | "halfling" | "human" | "dragonborn" | "gnome" | "half-elf" | "half-orc" | "tiefling" | "aarakocra" | "genasi" | "goliath" | "aasimar" | "firbolg" | "kenku" | "lizardfolk" | "tabaxi" | "triton";
+export type CharacterRaces = "dwarf" | "elf" | "halfling" | "human" | "dragonborn" | "gnome" | "half-elf" | "half-orc" | "tiefling" | "aarakocra" | "genasi" | "goliath" | "aasimar" | "firbolg" | "kenku" | "lizardfolk" | "tabaxi" | "triton" | 'orc';
 export type CharacterSkills = "acrobatics" | "animal handling" | "arcana" | "athletics" | "deception" | "history" | "insight" | "intimidation" | "investigation" | "medicine" | "nature" | "perception" | "performance" | "persuasion" | "religion" | "sleight of hand" | "stealth" | "survival";
 export type SpellSchools = "abjuration" | "conjuration" | "divination" | "enchantment" | "evocation" | "illusion" | "necromancy" | "transmutation";
 export type WeaponTypes = "melee" | "ranged";

@@ -73,9 +73,9 @@ const config: Config = {
   // maxWorkers: "50%",
 
   // An array of directory names to be searched recursively up from the requiring module's location
-  // moduleDirectories: [
-  //   "node_modules"
-  // ],
+  moduleDirectories: [
+    "node_modules"
+  ],
 
   // An array of file extensions your modules use
   // moduleFileExtensions: [
@@ -130,7 +130,7 @@ const config: Config = {
   // roots: [
   //   "<rootDir>"
   // ],
-  "roots": ["src"]
+  "roots": ["src"],
 
   // Allows you to use a custom runner instead of Jest's default test runner
   // runner: "jest-runner",
@@ -163,9 +163,9 @@ const config: Config = {
   // ],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
-  // testPathIgnorePatterns: [
-  //   "\\\\node_modules\\\\"
-  // ],
+  testPathIgnorePatterns: [
+    "\\\\node_modules\\\\"
+  ]
 
   // The regexp pattern or array of patterns that Jest uses to detect test files
   // testRegex: [],

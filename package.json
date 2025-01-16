@@ -43,5 +43,9 @@
     "d&d"
   ],
   "author": "Maciej Sielski",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@ms-sol/dice-roll": "^0.1.2",
+    "uuid": "^11.0.5"
+  }
 }

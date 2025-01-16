@@ -8,6 +8,7 @@ export interface NPC extends Character {
 }
 
 export interface Character {
+    armorClass: number;
     name: string;
     race: CharacterRaces;
     class: CharacterClasses;
@@ -17,6 +18,9 @@ export interface Character {
         max: number;
     };
     attributes: {
+        [key in AttributeName]: number;
+    };
+    modifiers: {
         [key in AttributeName]: number;
     };
     skills: Skill[];
