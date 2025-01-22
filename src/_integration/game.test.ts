@@ -168,6 +168,7 @@ const game: Game = {
     allStages: [stage1],
     allDialogues: sampleDialogues,
     allQuests: [sampleQuest],
+    allNpcs: [sampleNPC],
 };
 
 describe('Game logic should work', () => {

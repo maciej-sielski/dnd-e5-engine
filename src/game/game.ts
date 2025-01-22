@@ -1,4 +1,4 @@
-import { Character } from "../npc";
+import { Character, NPC } from "../npc";
 import { QuestJournal, Quest, DialogueTopic } from "../quests";
 import { StageId, StageFieldId, Stage } from "../stages";
 
@@ -11,4 +11,5 @@ export interface Game {
     allStages: Stage<StageFieldId>[];
     allQuests: Quest[];
     allDialogues: DialogueTopic[];
+    allNpcs: NPC[];
 }
