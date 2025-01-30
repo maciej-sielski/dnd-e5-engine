@@ -3,7 +3,7 @@ import { Game } from "./game";
 
 
 export function setQuestProgress(game: Game, questId: QuestId, questStageId: QuestStageId): void {
-    const questDefinition = game.allQuests.find(quest => quest.id === questId);
+    const questDefinition = game.definition.allQuests.find(quest => quest.id === questId);
     if (!questDefinition) {
         throw new Error(`Quest with id ${questId} not found`);
     }

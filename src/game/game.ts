@@ -8,8 +8,12 @@ export interface Game {
     journal: QuestJournal;
     player: Character;
 
+    definition: GameDefinition;
+}
+
+export interface GameDefinition {
     allStages: Stage<StageFieldId>[];
     allQuests: Quest[];
     allDialogues: DialogueTopic[];
-    allNpcs: NPC[];
+    allNpcs: NPC[];   
 }

@@ -165,10 +165,12 @@ const game: Game = {
     },
     currentStage: stage1.id,
     currentStageField: stage1.fields[0].id,
-    allStages: [stage1],
-    allDialogues: sampleDialogues,
-    allQuests: [sampleQuest],
-    allNpcs: [sampleNPC],
+    definition: {
+        allStages: [stage1],
+        allDialogues: sampleDialogues,
+        allQuests: [sampleQuest],
+        allNpcs: [sampleNPC],
+    }
 };
 
 describe('Game logic should work', () => {

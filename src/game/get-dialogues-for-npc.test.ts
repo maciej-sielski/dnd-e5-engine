@@ -68,14 +68,16 @@ describe('getDialoguesForNPC', () => {
     ];
 
     const game: Game = {
-        allDialogues: dialoguesExpected.concat(dialoguesNotExpected),
         currentStage: stageId,
         currentStageField: stageFieldId,
-        allNpcs: [{ npcId, name: 'Test NPC' } as any],
-        allQuests: [{ id: questId, priority: 'hidden-quest', stages: [{ id: questStageId, journalEntry: '' }] }],
-        allStages: [stage1],
         journal: { entries: [{ id: questId, isFinished: false, history: [{ id: questStageId, journalEntry: '' }] }] },
         player: null as any,
+        definition: {
+            allDialogues: dialoguesExpected.concat(dialoguesNotExpected),
+            allNpcs: [{ npcId, name: 'Test NPC' } as any],
+            allQuests: [{ id: questId, priority: 'hidden-quest', stages: [{ id: questStageId, journalEntry: '' }] }],
+            allStages: [stage1]
+        },
     };
 
     it('should return proper dialogues', () => {
