@@ -1,20 +1,56 @@
-<h1 class="text-3xl font-bold underline">
-  Hello world!
-</h1>
+<mat-drawer-container class="example-container" [hasBackdrop]="true">
+  <mat-drawer #drawer mode="over">
 
-<ul class="flex space-x-4">
-  <li><a mat-button routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page" class="text-white">Home</a></li>
-  <li><a mat-button routerLink="/new-game" routerLinkActive="active" ariaCurrentWhenActive="page" class="text-white">New Game</a>
-  </li>
-  @if (isLoggedIn()) {
-  <li><a mat-button routerLink="/load-game" routerLinkActive="active" ariaCurrentWhenActive="page" class="text-white">Load Game</a>
-  </li>
-  <li><a mat-button routerLink="/account" routerLinkActive="active" ariaCurrentWhenActive="page" class="text-white">Account</a>
-  </li>
-  } @else {
-  <li>
-    <button mat-button (click)="signIn()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Sign
-      In</button>
-  </li>
-  }
-</ul>
+
+    <ul class="flex space-x-4">
+      <li>
+        <a mat-button routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page" class="text-white">
+          <mat-icon>home</mat-icon> Home
+        </a>
+      </li>
+      <li>
+        <a mat-button routerLink="/new-game" routerLinkActive="active" ariaCurrentWhenActive="page" class="text-white">
+          <mat-icon>play_arrow</mat-icon>
+          New Game
+        </a>
+      </li>
+      @if (isLoggedIn()) {
+      <li>
+        <a mat-button routerLink="/load-game" routerLinkActive="active" ariaCurrentWhenActive="page" class="text-white">
+          <mat-icon>resume</mat-icon>
+          Load Game
+        </a>
+      </li>
+      <li>
+        <a mat-button routerLink="/account" routerLinkActive="active" ariaCurrentWhenActive="page" class="text-white">
+          <mat-icon>settings_account_box</mat-icon>
+          Account
+        </a>
+      </li>
+      <li>
+        <a mat-button (click)="signOut()" routerLinkActive="active" ariaCurrentWhenActive="page" class="text-white">
+          <mat-icon>account_circle_off</mat-icon>
+          Wyloguj
+        </a>
+      </li>
+      } @else {
+      <li>
+        <button mat-button (click)="signIn()"
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          <mat-icon>account_circle</mat-icon>
+          Zaloguj
+        </button>
+      </li>
+      }
+    </ul>
+
+  </mat-drawer>
+  <mat-drawer-content>
+    <button mat-icon-button aria-label="Otwórz menu nawigacyjne" (click)="drawer.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <router-outlet></router-outlet>
+
+  </mat-drawer-content>
+</mat-drawer-container>
