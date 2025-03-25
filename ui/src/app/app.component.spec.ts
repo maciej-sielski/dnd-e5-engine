@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'dnd-e5-ui' title`, () => {
+  it(`should have the 'ui' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('dnd-e5-ui');
+    expect(app.title).toEqual('ui');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, dnd-e5-ui');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, ui');
   });
 });
